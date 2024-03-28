@@ -62,7 +62,7 @@
             const quoteElement = document.querySelector('.quote');
             let currentQuoteIndex = 0;
             let currentCharIndex = 0;
-            let typingSpeed = 50; // Adjust typing speed here
+            let typingSpeed = 45; // Adjust typing speed here
         
             function displayQuote() {
                 const quote = quotes[currentQuoteIndex];
@@ -71,7 +71,7 @@
                     currentCharIndex++;
                     setTimeout(displayQuote, typingSpeed);
                 } else {
-                    setTimeout(eraseQuote, 2000); // Wait for 2 seconds before erasing
+                    setTimeout(eraseQuote, 5000); // Wait for 5 seconds before erasing
                 }
             }
         
