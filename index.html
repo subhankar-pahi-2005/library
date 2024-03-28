@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bhadrak Engineering School & Technology E-library.">
+    <link rel="shortcut icon" href="./assets/images/favicon best .png" type="image/x-icon">
+    <title>E-library</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="smooth.css">
+    <style>
+        .hero-section {
+            height: 100px; /* Set a fixed height for the hero section */
+            overflow: hidden; /* Hide overflow to prevent fluctuation */
+        }
+
+        .quote {
+            position: absolute;
+            opacity: 1; /* Ensure the quote is initially visible */
+            color: white;
+            overflow: hidden;
+            font-size: 48px; /* Adjust font size as needed */
+        }
+    
+        .colored {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <section class="container">
+            <div class="nav">
+                <a href="index.html"><h1>BEST LIBRARY</h1></a>
+            </div>
+        </section>
+
+        <div class="hero-section">
+            <h1>
+                <div class="quote"></div>
+            </h1>
+        </div>
+        
+        <script>
+            const quotes = [
+                "Today's research tomorrow’s innovation.",
+                "Discovering pathways to progress.",
+                "Pioneering ideas, shaping the future.",
+                "Unraveling mysteries, igniting change.",
+                "Innovating today for a better tomorrow.",
+                "Challenging conventions, driving innovation.",
+                "Empowering minds, fueling innovation.",
+                "Embracing curiosity, fostering innovation."
+            ];
+        
+            const quoteElement = document.querySelector('.quote');
+            let currentQuoteIndex = 0;
+            let currentCharIndex = 0;
+            let typingSpeed = 50; // Adjust typing speed here
+        
+            function displayQuote() {
+                const quote = quotes[currentQuoteIndex];
+                if (currentCharIndex < quote.length) {
+                    quoteElement.innerHTML += quote.charAt(currentCharIndex);
+                    currentCharIndex++;
+                    setTimeout(displayQuote, typingSpeed);
+                } else {
+                    setTimeout(eraseQuote, 2000); // Wait for 2 seconds before erasing
+                }
+            }
+        
+            function eraseQuote() {
+                if (currentCharIndex >= 0) {
+                    const quote = quotes[currentQuoteIndex];
+                    quoteElement.innerHTML = quote.substring(0, currentCharIndex);
+                    currentCharIndex--;
+                    setTimeout(eraseQuote, 30); // Adjust erasing speed here
+                } else {
+                    currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+                    setTimeout(displayQuote, 500); // Wait for 0.5 seconds before displaying next quote
+                }
+            }
+        
+            displayQuote();
+        </script>
+        
+        <div class="top-btn-container grid btn-grid-container-3--cols">
+            <div class="btn"><a href="http://lmsebook.vercel.app">Download E-books</a></div>
+            <div class="btn"><a href="https://elibrarybest.com/login.php" target="_blank">Admin Login</a></div>
+            <div class="btn"><a href="https://elibrarybest.com/404.html">Our team members</a></div>
+        </div>
+
+        <section class="service-section">
+            <h2>Our <br>Provided Services</h2>
+            <div class="grid service-grid-container-three--cols">
+                <div class="service-item-container">
+                    <div class="service-img-container">
+                        <img src="./assets/images/lms image3.png" alt="">
+                    </div>
+                    <h3>LMS System</h3>
+                    <p>We have a Library Management system for librarians to automate and organize library operations, to enhance efficiency and accessibility of library resources.</p>
+                </div>
+                <div class="service-item-container">
+                    <div class="service-img-container">
+                        <img src="./assets/images/eboks.webp" alt="">
+                    </div>
+                    <h3>E-books</h3>
+                    <p>We have a large volume of journals, periodicals, fictional, and non-fictional books available for FREE READING OR DOWNLOADING, offering immense value to students.</p>
+                </div>
+                <div class="service-item-container">
+                    <div class="service-img-container">
+                        <img src="./assets/images/chatimage.jpg" alt="">
+                    </div>
+                    <h3>Assistant</h3>
+                    <p>We have a personalized chatbot that clears all doubts and questions of users regarding our Library.</p>
+                </div>
+            </div>
+        </section>
+        <!-- C:\Users\SUBHANKAR PAHI\Downloads\LMS_Landing-main\LMS_Landing-main -->
+
+        <section class="about-section">
+            <div class="about-container">
+                <p>Welcome to the BEST Library, a dynamic space dedicated to fostering academic excellence, supporting research, and enhancing your learning experience. Our website serves as your gateway to a wealth of resources, services, and events designed to enrich your academic journey.</p>
+            </div>
+        </section>
+
+        <section class="social-media-connection--section">
+            <div class="social-media-heading-move"></div>
+            <h3>Social media and connections</h3>
+            <a href="https://www.facebook.com/profile.php?id=100086189191597" target="_blank">
+                <div class="best-social-media--container top-social-container">
+                    <h2>Facebook</h2>
+                    <img src="./assets/icons/🦆 icon _arrow forward_.png" alt="">
+                </div>
+            </a>
+            <a href="https://www.instagram.com/bestbhadrak/" target="_blank">
+                <div class="best-social-media--container">
+                    <h2>Instagram</h2>
+                    <img src="./assets/icons/🦆 icon _arrow forward_.png" alt="">
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/bhadrak-engineering-school-and-technology-best-baa948256/" target="_blank">
+                <div class="best-social-media--container">
+                    <h2>LinkedIn</h2>
+                    <img src="./assets/icons/🦆 icon _arrow forward_.png" alt="">
+                </div>
+            </a>
+            <a href="https://www.youtube.com/@BESTBHADRAK" target="_blank">
+                <div class="best-social-media--container">
+                    <h2>YouTube</h2>
+                    <img src="./assets/icons/🦆 icon _arrow forward_.png" alt="">
+                </div>
+            </a>
+            <a href="https://twitter.com/BestBhadrak_" target="_blank">
+                <div class="best-social-media--container">
+                    <h2>Twitter</h2>
+                    <img src="./assets/icons/🦆 icon _arrow forward_.png" alt="">
+                </div>
+            </a>
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-item--container grid footer-grid-container-four--cols">
+                        <div class="item-container">
+                            <h4 class="footer-heading">Product</h4>
+                            <h5 class="footer-item">LMS</h5>
+                            <h5 class="footer-item">E-book Download</h5>
+                        </div>
+                        <div class="item-container">
+                            <h4 class="footer-heading">Support</h4>
+                            <h5 class="footer-item">Student Service</h5>
+                            <h5 class="footer-item">Library Service</h5>
+                        </div>
+                        <div class="item-container">
+                            <h4 class="footer-heading">Contact</h4>
+                            <h5 class="footer-item">bestlms@gmail.com</h5>
+                            <h5 class="footer-item">+91-709844645</h5>
+                        </div>
+                        <div class="item-container">
+                            <h4 class="footer-heading">About Us</h4>
+                            <h5 class="footer-item">Library</h5>
+                            <h5 class="footer-item">Department</h5>
+                            <h5 class="footer-item">Developers</h5>
+                        </div>
+                    </div>
+                    <div class="footer-legal--document">
+                        <div class="copy-right-container">
+                            <h6>© Copyright BEST 2023-2024 | Developed by CSE department</h6>
+                        </div>
+                        <div class="privacy-policy">
+                            <a class="privacy" href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </div>
+
+    <!-- Chatbot -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="LIBRARY_ASSISTANT"
+      agent-id="aa4fe123-0af4-40a6-9540-bd327102ed4e"
+      language-code="en"
+    ></df-messenger>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
